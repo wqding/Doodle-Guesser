@@ -1,5 +1,8 @@
 <img src="Doodle_Guesser.jpg" width="300px">
-Doodle Guesser is an implementation of Neural Net Minus, a neural network library I built from scratch
+Doodle Guesser is an implementation of Neural Net Minus, a neural network library I built from scratch:
+
+https://github.com/wqding/Neural-Net-Minus
+
 
 My custom NN is able to consistently achieve at least 85% accuracy with the dataset.
 
