@@ -1,13 +1,13 @@
 
 # from matplotlib import pyplot as plt
 import numpy as np
-import NN
+import Neural_Net_Minus as NNM
 
-airplane_data = np.load('C:/Users/Adam/Desktop/workspaces/Python workspace/Doodle Classifier/Data/airplane.npy')/255
-basketball_data = np.load('C:/Users/Adam/Desktop/workspaces/Python workspace/Doodle Classifier/Data/basketball.npy')/255
-bird_data = np.load('C:/Users/Adam/Desktop/workspaces/Python workspace/Doodle Classifier/Data/bird.npy')/255
-door_data = np.load('C:/Users/Adam/Desktop/workspaces/Python workspace/Doodle Classifier/Data/door.npy')/255
-hexagon_data = np.load('C:/Users/Adam/Desktop/workspaces/Python workspace/Doodle Classifier/Data/hexagon.npy')/255
+airplane_data = np.load('./Data/airplane.npy')/255
+basketball_data = np.load('./Data/basketball.npy')/255
+bird_data = np.load('./Data/bird.npy')/255
+door_data = np.load('./Data/door.npy')/255
+hexagon_data = np.load('./Data/hexagon.npy')/255
 
 #format answers
 airplane = [1, 0, 0, 0, 0]
@@ -16,6 +16,7 @@ bird = [0, 0, 1, 0, 0]
 door = [0, 0, 0, 1, 0]
 hexagon = [0, 0, 0, 0, 1]
 
+# setting parameters
 train_set_size = 10000
 train_epochs = 10000
 testing_set_size = 100
@@ -43,7 +44,7 @@ for x in range(testing_set_size//5):
     
 
 # passing desired shape of neural network
-nn = NN.neural_network([784, 100, 100, 5], 0.03);
+nn = NNM.neural_network([784, 100, 100, 5], 0.03);
 
 for i in range(train_epochs):
     # picking random data to train

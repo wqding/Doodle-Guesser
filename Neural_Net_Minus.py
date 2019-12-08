@@ -6,6 +6,15 @@ def sgm(x):
 def sgm_d(x):
     return sgm(x) * (1-sgm(x))
 
+def ReLU(x):
+    return np.maximum(0, x)
+
+def dReLU(x):
+    # print(x)
+    x[x<=0] = 0
+    x[x>0] = 1
+    return x
+
 
 class neural_network:
     # make this dynamic and able to have many layers later
@@ -52,7 +61,7 @@ class neural_network:
             self.layers_a.append(curr_layer_a)
         
         # return output layer
-        return self.layers_a[self.num_layers-2]
+        return self.layers_a[-1]
             
     
     def train(self, input_arr, target_arr):
