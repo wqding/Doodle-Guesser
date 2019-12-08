@@ -1,4 +1,4 @@
-<img src="Doodle_guesser.png" width="300px">
+<img src="Doodle_guesser.jpg" width="300px">
 Doodle Guesser is an implementation of Neural Net Minus, a neural network library I built from scratch
 
 My custom NN is able to consistently achieve at least 85% accuracy with the dataset.
